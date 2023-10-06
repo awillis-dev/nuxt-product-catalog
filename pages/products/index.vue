@@ -1,9 +1,13 @@
-<template lang="">
+<template>
   <div>
     <p>Products</p>
   </div>
 </template>
-<script>
-export default {};
+
+<script setup>
+definePageMeta({
+  layout: "products",
+});
 </script>
-<style lang=""></style>
+
+<style scoped></style>

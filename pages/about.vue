@@ -7,11 +7,12 @@
       ducimus placeat, at eaque dolorem mollitia odio nulla soluta odit
       temporibus.
     </p>
+    <div>{{ data }}</div>
   </div>
 </template>
 
-<script>
-export default {};
+<script setup>
+const { data } = await useFetch("/api/ninja");
 </script>
 
 <style scoped>

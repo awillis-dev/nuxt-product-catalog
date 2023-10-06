@@ -1,9 +1,21 @@
-<template lang="">
+<template>
   <div>
-    <p>Products</p>
+    <div class="grid grid-cols-4 gap-5">
+      <div v-for="p in products" :key="p.id">
+        <ProductCard :product="p" />
+      </div>
+    </div>
   </div>
 </template>
-<script>
-export default {};
+
+<script setup>
+definePageMeta({
+  layout: "products",
+});
+
+// fetch products from API
+// 'products' : array of different objects
+const { data: products } = await useFetch("https://fakestoreapi.com/products");
 </script>
-<style lang=""></style>
+
+<style scoped></style>

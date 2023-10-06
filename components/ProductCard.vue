@@ -12,4 +12,10 @@
 const { product } = defineProps(["product"]);
 </script>
 
-<style scoped></style>
+<style scoped>
+.thumb {
+  max-height: 120px;
+  max-width: 70%;
+  margin: 0 auto;
+}
+</style>

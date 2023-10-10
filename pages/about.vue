@@ -12,7 +12,10 @@
 </template>
 
 <script setup>
-const { data } = await useFetch("/api/ninja");
+const { data } = await useFetch("/api/ninja?name=alexis", {
+  method: "post",
+  body: { age: 25 },
+});
 </script>
 
 <style scoped>
